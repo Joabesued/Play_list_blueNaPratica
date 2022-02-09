@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body {
+  background-color: #121214;
+  color: #fff;
+  font-family: Roboto, Arial;
+}
+
+
+
+nav ul {
+  padding: 1rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li img {
+  width: 20%;
+}
+
+nav ul li i {
+  font-size: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+section#player {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-bottom: 10rem;
+}
+
+section#player h1 {
+  width: 100%;
+  text-align: center;
+  padding: 0 0 5rem 0;
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+section#player div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+section#player div img#currentImg {
+  width: 25rem;
+  height: 25rem;
+}
+
+section#player div h2#currentName {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0 0.5rem 0;
+  font-size: 2rem;
+}
+
+section#player table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 50rem;
+}
+
+
+section#player table th,
+td {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+section#player table td img {
+  width: 3rem;
+}
+
+section#controls {
+  background-color: #232327;
+  padding: 1.7rem 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section#controls i {
+  font-size: 3rem;
+}
+
+section#controls span {
+  padding: 1rem;
+}
+
+section#controls input#progressbar {
+  width: 60%;
+}
+
+section#controls i {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+section#controls i:hover {
+  background-color: #ffffff10;
+  border-radius: 3rem;
+}
+
+section#controls i#vol-icon {
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+section#controls input#volume {
+  width: 10%;
+}
+
+/* Área de ADMIN */
+
+section#add {
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section#add h2 {
+  width: 100%;
+  text-align: center;
+  padding: 0 0 5rem 0;
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+}
+
+form input {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.3rem 1rem 1rem 1rem;
+  font-size: 1.5rem;
+  border: solid 1px #0071a5;
+  outline: none;
+}
+
+form label {
+  margin: 0 1rem 0 1rem;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+form button {
+  border: solid 2px #00a53f;
+  padding: 0.6rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: transparent;
+  color: #00a53f;
+  width: 20%;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+form button:hover {
+  color: #fff;
+  background-color: #00a53f;
+}
+
+section#player h2 {
+  width: 100%;
+  text-align: center;
+  padding: 5rem 0 3rem 0;
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+td#actions a {
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+a#editMusic {
+  margin-right: 1rem;
+}
+
+a#editMusic:hover {
+  color: rgb(0, 68, 255);
+  border: 1px solid rgb(0, 68, 255);
+}
+
+a#deleteMusic:hover {
+  color: rgb(255, 0, 0);
+  border: 1px solid rgb(255, 0, 0);
+}
+
+html::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(85, 85, 85, 0.3);
+  background: #121214;
+}
+
+html::-webkit-scrollbar {
+  width: 12px;
+  background: #121214;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #414149;
+}
+
+
+section.modal{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #00000080;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
+}
+
+section.modal div#card{
+  width: 50%;
+  position: relative;
+  background-color: #202024;
+}
+
+section.modal div#card h2{
+  padding: 2rem;
+  margin: 0;
+  color: #ffffff;
+}
+
+section.modal div#card a#fechar{
+  position: absolute;
+  right: 0;
+  top: .7rem;
+  font-size: 1.4rem;
+  color: #ffffff;
+  padding: 1.5rem;
+}
+
+section.modal div#card a#fechar:hover{
+  color: #ff0000;
+}
+
+section.modal div#card hr{
+  width: 90%;
+  margin: 0 auto;
+}
+
+section.modal div#card p{
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  color: #fff;
+}
+
+section.modal div#card div#btns{
+  display: flex;
+  justify-content: center;
+  padding: 0 2rem 2rem 2rem;
+}
+
+section.modal div#card div#btns a{
+  text-decoration: none;
+  padding: .9rem;
+  width: 7rem;
+  text-align: center;
+}
+
+section.modal div#card div#btns a.btn-cancelar{
+  background-color: #202024;
+  color: #ff0101;
+  border: solid 1px #ff0101;
+  margin-right: 1rem;
+  transition: all .5s ease-out;
+  font-size: 1.1rem;
+}
+
+section.modal div#card div#btns a.btn-cancelar:hover{
+  background-color: #ff0101;
+  color: #fff;
+}
+
+section.modal div#card div#btns a.btn-apagar{
+  background-color: #202024;
+  color: #00aa2a;
+  border: solid 1px #00aa2a;
+  transition: all .5s ease-out;
+  font-size: 1.1rem;
+}
+
+section.modal div#card div#btns a.btn-apagar:hover{
+  background-color: #00aa2a;
+  color: #fff;
+}
+
+form#modal {
+  width: 100%;
+  padding: 2rem 0;
+}
