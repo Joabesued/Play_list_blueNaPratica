@@ -12,8 +12,12 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded());
 connetToDb();
 
-app.get("/", (req, res) => {
-  res.render("index");
+app.get("/", async (req, res) => {
+
+  const playlist = await Music.find();
+  console.log(playlist);
+
+  res.render("index",{ playlist });
 });
 
 app.get("/admin", (req, res) => {
